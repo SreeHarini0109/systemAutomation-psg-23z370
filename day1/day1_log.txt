@@ -1,0 +1,85 @@
+2026-10-10 14:38:52 | reading={'temperature': 77.1, 'pressure': 114.9, 'vibration': 2.04, 'current': 11.35} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:38:52 | reading={'temperature': 94.6, 'pressure': 84.2, 'vibration': 4.16, 'current': 16.64} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:38:53 | reading={'temperature': 70.2, 'pressure': 87.2, 'vibration': 1.24, 'current': 17.91} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:38:53 | reading={'temperature': None, 'pressure': 92.1, 'vibration': 3.88, 'current': 9.13} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:38:53 | reading={'temperature': 85.6, 'pressure': 100.9, 'vibration': 3.19, 'current': 16.12} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 14:38:53 | reading={'temperature': 50.1, 'pressure': 88.8, 'vibration': 4.91, 'current': 11.67} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 14:38:53 | reading={'temperature': 76.0, 'pressure': 129.7, 'vibration': 0.51, 'current': 9.81} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 14:38:54 | reading={'temperature': 92.2, 'pressure': 84.2, 'vibration': 1.8, 'current': 17.36} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:38:54 | reading={'temperature': 90.6, 'pressure': 157.8, 'vibration': 0.68, 'current': None} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:38:54 | reading={'temperature': 56.4, 'pressure': 103.1, 'vibration': 0.88, 'current': 14.43} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:49:31 | reading={'temperature': 71.1, 'pressure': 164.9, 'vibration': 4.55, 'current': 9.05} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 14:49:31 | reading={'temperature': 64.8, 'pressure': 81.5, 'vibration': 4.6, 'current': 12.33} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 14:49:31 | reading={'temperature': 60.5, 'pressure': 122.6, 'vibration': 0.37, 'current': 8.8} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 14:49:31 | reading={'temperature': 93.3, 'pressure': 87.2, 'vibration': 4.72, 'current': 9.0} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:49:32 | reading={'temperature': 91.8, 'pressure': 169.3, 'vibration': 3.06, 'current': 5.21} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:49:32 | reading={'temperature': 75.7, 'pressure': 126.4, 'vibration': 3.71, 'current': None} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 14:49:32 | reading={'temperature': 65.6, 'pressure': 97.9, 'vibration': 4.57, 'current': 21.38} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 14:49:32 | reading={'temperature': 86.3, 'pressure': 108.5, 'vibration': 2.41, 'current': 7.7} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 14:49:32 | reading={'temperature': 90.7, 'pressure': 93.3, 'vibration': 3.77, 'current': 15.6} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:49:33 | reading={'temperature': 52.5, 'pressure': 83.3, 'vibration': 0.78, 'current': None} | rule=LOW_TEMP | action=WARN_HEATER
+2026-10-10 14:49:46 | reading={'temperature': None, 'pressure': 113.2, 'vibration': 0.32, 'current': 13.09} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:49:46 | reading={'temperature': 90.2, 'pressure': 118.8, 'vibration': 3.56, 'current': None} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:49:46 | reading={'temperature': 79.0, 'pressure': 120.2, 'vibration': 2.08, 'current': 20.62} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 14:49:46 | reading={'temperature': 64.7, 'pressure': 95.3, 'vibration': 2.54, 'current': 6.82} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:49:47 | reading={'temperature': None, 'pressure': 114.3, 'vibration': 3.49, 'current': 7.92} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:49:47 | reading={'temperature': 89.7, 'pressure': 105.5, 'vibration': 2.3, 'current': 12.51} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 14:49:47 | reading={'temperature': 70.5, 'pressure': 81.8, 'vibration': 2.08, 'current': 6.74} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:49:47 | reading={'temperature': 72.6, 'pressure': 105.8, 'vibration': 3.96, 'current': 18.65} | rule=HIGH_CURRENT | action=CHECK_LOAD
+2026-10-10 14:49:47 | reading={'temperature': 71.5, 'pressure': 84.9, 'vibration': 3.66, 'current': None} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:49:48 | reading={'temperature': 88.0, 'pressure': 107.7, 'vibration': 3.82, 'current': 17.01} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 14:49:51 | reading={'temperature': 56.1, 'pressure': 115.4, 'vibration': 5.06, 'current': 20.77} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 14:49:51 | reading={'temperature': None, 'pressure': 97.4, 'vibration': 3.51, 'current': 13.91} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:49:51 | reading={'temperature': None, 'pressure': 93.2, 'vibration': 4.81, 'current': 17.95} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 14:49:51 | reading={'temperature': None, 'pressure': 85.1, 'vibration': 5.25, 'current': 20.07} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 14:49:51 | reading={'temperature': 86.5, 'pressure': 94.8, 'vibration': 3.78, 'current': 7.79} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 14:49:52 | reading={'temperature': 93.5, 'pressure': 90.4, 'vibration': 0.76, 'current': 8.86} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:49:52 | reading={'temperature': 93.5, 'pressure': 110.6, 'vibration': 4.3, 'current': 13.86} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:49:52 | reading={'temperature': 70.0, 'pressure': 169.4, 'vibration': 3.23, 'current': 14.49} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 14:49:52 | reading={'temperature': 55.8, 'pressure': 129.6, 'vibration': 4.64, 'current': 19.9} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 14:49:53 | reading={'temperature': 71.0, 'pressure': 96.8, 'vibration': 0.35, 'current': 20.75} | rule=HIGH_CURRENT | action=CHECK_LOAD
+2026-10-10 14:50:03 | reading={'temperature': 52.7, 'pressure': 163.4, 'vibration': 0.45, 'current': 20.56} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 14:50:03 | reading={'temperature': 81.3, 'pressure': 105.4, 'vibration': 1.41, 'current': 7.57} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 14:50:03 | reading={'temperature': 77.4, 'pressure': 111.6, 'vibration': 3.28, 'current': 14.89} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:50:04 | reading={'temperature': 83.8, 'pressure': 127.6, 'vibration': 1.57, 'current': 7.74} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 14:50:04 | reading={'temperature': 94.0, 'pressure': 101.0, 'vibration': 1.26, 'current': None} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:50:04 | reading={'temperature': 85.8, 'pressure': 165.6, 'vibration': 2.36, 'current': 17.92} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 14:50:04 | reading={'temperature': 90.9, 'pressure': 82.7, 'vibration': 2.19, 'current': 10.58} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 14:50:04 | reading={'temperature': None, 'pressure': 119.7, 'vibration': 4.54, 'current': 11.69} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 14:50:05 | reading={'temperature': 71.8, 'pressure': 83.6, 'vibration': 3.0, 'current': None} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 14:50:05 | reading={'temperature': 91.9, 'pressure': 119.6, 'vibration': 3.72, 'current': 12.88} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 15:20:59 | reading={'temperature': 79.3, 'pressure': 83.9, 'vibration': 1.02, 'current': 5.93} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 15:20:59 | reading={'temperature': 63.5, 'pressure': 105.2, 'vibration': 3.95, 'current': 20.45} | rule=HIGH_CURRENT | action=CHECK_LOAD
+2026-10-10 15:20:59 | reading={'temperature': 94.1, 'pressure': 80.8, 'vibration': 1.71, 'current': 6.58} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 15:20:59 | reading={'temperature': 52.6, 'pressure': 128.8, 'vibration': 5.48, 'current': None} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 15:21:00 | reading={'temperature': None, 'pressure': 128.4, 'vibration': 1.34, 'current': 18.16} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 15:21:00 | reading={'temperature': 59.7, 'pressure': 93.4, 'vibration': 2.63, 'current': 13.74} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 15:21:00 | reading={'temperature': 56.8, 'pressure': 118.1, 'vibration': 1.21, 'current': 12.59} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 15:21:00 | reading={'temperature': 56.0, 'pressure': 119.1, 'vibration': 3.08, 'current': 9.06} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 15:21:00 | reading={'temperature': 72.2, 'pressure': 88.2, 'vibration': 0.48, 'current': None} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 15:21:01 | reading={'temperature': None, 'pressure': 86.9, 'vibration': 2.01, 'current': 16.07} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 16:08:45 | machine=M1 | reading={'temperature': 56.9, 'pressure': 113.0, 'vibration': 1.78, 'current': None} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 16:08:45 | machine=M2 | reading={'temperature': 85.1, 'pressure': 121.0, 'vibration': 1.55, 'current': 19.3} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 16:08:45 | machine=M3 | reading={'temperature': 78.9, 'pressure': 162.5, 'vibration': 1.36, 'current': 7.75} | rule=CRITICAL_PRESSURE | action=EMERGENCY_SHUTDOWN
+2026-10-10 16:08:45 | machine=M4 | reading={'temperature': None, 'pressure': 80.0, 'vibration': 4.35, 'current': 20.26} | rule=HIGH_CURRENT | action=CHECK_LOAD
+2026-10-10 16:08:45 | machine=M5 | reading={'temperature': 71.5, 'pressure': 94.4, 'vibration': 1.55, 'current': 20.87} | rule=HIGH_CURRENT | action=CHECK_LOAD
+2026-10-10 16:09:55 | machine=M1 | reading={'temperature': 90.6, 'pressure': 120.5, 'vibration': 1.49, 'current': 16.04} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 16:09:55 | machine=M2 | reading={'temperature': 67.8, 'pressure': 80.1, 'vibration': 3.19, 'current': 15.89} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 16:09:55 | machine=M3 | reading={'temperature': 91.5, 'pressure': 104.2, 'vibration': 5.59, 'current': 21.57} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 16:09:55 | machine=M4 | reading={'temperature': 78.4, 'pressure': 87.3, 'vibration': 2.15, 'current': 19.31} | rule=HIGH_CURRENT | action=CHECK_LOAD
+2026-10-10 16:09:55 | machine=M5 | reading={'temperature': 78.9, 'pressure': 120.9, 'vibration': 5.77, 'current': 15.64} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 16:10:31 | machine=M1 | reading={'temperature': 81.1, 'pressure': 80.5, 'vibration': 0.41, 'current': 8.95} | rule=HIGH_TEMP | action=REDUCE_SPEED
+2026-10-10 16:10:31 | machine=M2 | reading={'temperature': 93.4, 'pressure': 93.9, 'vibration': 3.02, 'current': 5.09} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 16:10:31 | machine=M3 | reading={'temperature': 91.4, 'pressure': 112.1, 'vibration': 4.38, 'current': 14.78} | rule=CRITICAL_TEMP | action=STOP_MACHINE
+2026-10-10 16:10:31 | machine=M4 | reading={'temperature': None, 'pressure': 92.3, 'vibration': 5.56, 'current': 9.29} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 16:10:31 | machine=M5 | reading={'temperature': 56.8, 'pressure': 116.6, 'vibration': 3.77, 'current': 9.55} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 16:33:54 | machine=M1 | reading={'temperature': 75.3, 'pressure': 104.9, 'vibration': 5.78, 'current': None} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 16:33:54 | machine=M2 | reading={'temperature': 65.9, 'pressure': 102.0, 'vibration': 5.4, 'current': 8.45} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 16:33:54 | machine=M3 | reading={'temperature': 66.5, 'pressure': 102.2, 'vibration': 5.59, 'current': 7.79} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 16:33:54 | machine=M4 | reading={'temperature': 79.2, 'pressure': 89.3, 'vibration': 3.35, 'current': 17.41} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 16:33:54 | machine=M5 | reading={'temperature': 68.3, 'pressure': 116.0, 'vibration': 3.08, 'current': None} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 16:34:54 | machine=M1 | reading={'temperature': 69.6, 'pressure': 113.6, 'vibration': 1.99, 'current': 14.58} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 16:34:54 | machine=M2 | reading={'temperature': 64.4, 'pressure': 122.2, 'vibration': 5.21, 'current': 5.27} | rule=HIGH_PRESSURE | action=ALERT_OPERATOR
+2026-10-10 16:34:54 | machine=M3 | reading={'temperature': None, 'pressure': 106.5, 'vibration': 4.12, 'current': 6.51} | rule=NO_RULE_FIRED | action=CONTINUE_NORMAL
+2026-10-10 16:34:54 | machine=M4 | reading={'temperature': 55.7, 'pressure': 116.5, 'vibration': 5.2, 'current': 16.69} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
+2026-10-10 16:34:54 | machine=M5 | reading={'temperature': 75.6, 'pressure': 119.7, 'vibration': 5.52, 'current': 14.51} | rule=HIGH_VIBRATION | action=INSPECT_MOTOR
