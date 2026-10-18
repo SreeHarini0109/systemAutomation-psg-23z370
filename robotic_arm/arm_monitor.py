@@ -101,9 +101,10 @@ def read_notes():
         for i, word in enumerate(words):
             if i > 0 and words[i - 1] in ("no", "not", "without"):
                 continue
-            if word in SEVERE_WORDS:
+            # startswith so "squeaking" and "noises" still count
+            if any(word.startswith(k) for k in SEVERE_WORDS):
                 score += 3
-            elif word in MILD_WORDS:
+            elif any(word.startswith(k) for k in MILD_WORDS):
                 score += 1
         notes[arm.group()] = notes.get(arm.group(), 0) + score
     return notes
@@ -135,6 +136,10 @@ def main():
         danger, spoofed, wear = [], [], None
 
         for joint, (torque, current, temp, vibration, hours) in joints.items():
+            if None in (torque, current, temp, vibration):
+                danger.append(f"{joint} reading missing, can't confirm it's safe")
+                continue
+
             real_torque = check_spoof(joint, torque, current)
             if real_torque is not None:
                 spoofed.append(f"{joint} reports {torque} Nm, current says {real_torque:.0f} Nm")
@@ -142,8 +147,11 @@ def main():
             danger += safety_check(joint, torque, temp, vibration)
 
             if model is not None:
-                p = wear_probability(model, joint, torque, temp, vibration, hours)
-                wear = p if wear is None else max(wear, p)
+                try:
+                    p = wear_probability(model, joint, torque, temp, vibration, hours)
+                    wear = p if wear is None else max(wear, p)
+                except Exception as e:
+                    print(f"model failed on {arm} {joint} ({e}), skipping wear check")
 
         decision = decide(danger, spoofed, wear, notes.get(arm, 0))
 

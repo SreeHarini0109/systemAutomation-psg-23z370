@@ -40,13 +40,13 @@ python3 arm_monitor.py --no-model   # same run with the ML model turned off
 1. **Spoof check:** torque should match motor current × torque constant. If they differ by more than 25%, the torque sensor is flagged and the higher value is used.
 2. **Safety stop:** fixed limits, no model involved. Torque above 180 / 110 / 40 Nm (shoulder / elbow / wrist), temperature above 85 °C, or vibration above 12 mm/s.
 3. **Wear prediction:** a RandomForest trained on `joint_history.csv` gives each joint a wear risk, and the arm takes the highest.
-4. **Maintenance notes:** only notes that name an arm count. Severe words (grinding, burning, smoke...) add 3, mild words (squeak, backlash, hot...) add 1. A word after "no" or "not" is skipped.
+4. **Maintenance notes:** only notes that name an arm count. Severe words (grinding, burning, smoke...) add 3, mild words (squeak, backlash, hot...) add 1. A word after "no", "not" or "without" is skipped, and words are matched by how they start, so "squeaking" counts as "squeak".
 
 ### Decision rules
 
 | Decision | When |
 |---|---|
-| `EMERGENCY_STOP` | Any safety limit crossed |
+| `EMERGENCY_STOP` | Any safety limit crossed, or a sensor reading is missing |
 | `SCHEDULE_MAINTENANCE` | Spoof found, note score 3+, wear risk 0.7+, or a mild note together with wear risk 0.4+ |
 | `MONITOR` | Any mild note, or wear risk 0.4+ |
 | `SAFE` | None of the above |

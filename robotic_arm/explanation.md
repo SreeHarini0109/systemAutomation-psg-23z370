@@ -26,11 +26,11 @@ Each limit is about 1.5 to 1.6 times the top of the normal range. Each one also 
 
 ### Temperature: 85 °C
 
-Healthy joints run at 35–50 °C, and the most worn joints in the history reach about 77 °C. Above 85 °C, gearbox grease starts breaking down quickly, and the motor and encoder electronics get close to their limits. The value is also above the worst case from wear alone, so only a real fault crosses it.
+A new joint runs at 35–50 °C, and the hottest joint anywhere in the history reaches about 77 °C. Above 85 °C, gearbox grease starts breaking down quickly, and the motor and encoder electronics get close to their limits. The value is also above the worst case from wear alone, so only a real fault crosses it.
 
 ### Vibration: 12 mm/s
 
-Healthy joints vibrate at 1–3 mm/s, and worn joints in the history reach about 10 mm/s. General machine vibration charts (ISO 10816 style) treat values above roughly 11 mm/s as levels that cause damage. 12 mm/s is just above that and above the worst worn reading.
+A new joint vibrates at 1–3 mm/s, and the worst joint in the history reaches about 10 mm/s. General machine vibration charts (ISO 10816 style) treat values above roughly 11 mm/s as levels that cause damage. 12 mm/s is just above that and above the worst worn reading.
 
 ### Why the check is separate from the model
 
@@ -63,7 +63,7 @@ The rules are checked top to bottom, and the first match wins.
 
 | Order | Decision | When |
 |---|---|---|
-| 1 | EMERGENCY_STOP | Any safety limit is crossed |
+| 1 | EMERGENCY_STOP | Any safety limit is crossed, or a joint reading is missing |
 | 2 | SCHEDULE_MAINTENANCE | Spoof found, note score 3 or more, or wear risk 0.7 or more |
 | 3 | SCHEDULE_MAINTENANCE | Note score 1 or more and wear risk 0.4 or more, so both signals agree |
 | 4 | MONITOR | Note score 1 or more, or wear risk 0.4 or more |
@@ -75,6 +75,7 @@ The rules are checked top to bottom, and the first match wins.
 - **Severe words go straight to maintenance.** "Grinding" or "burning" describes damage that is already happening, so waiting for the model to agree is not worth the risk.
 - **Agreement escalates.** A mild note or a medium wear risk alone is only worth watching. When both point the same way at once, it is more likely to be real, so the arm moves up to maintenance.
 - **If the model fails, the notes still count.** Wear risk becomes `n/a` and the decision uses the notes, the spoof check and the safety stop.
+- **A missing sensor reading counts as danger.** If a joint can't report torque, current, temperature or vibration, the system can't prove it is safe, so the arm is stopped.
 
 ### Results from the sample run
 
@@ -88,8 +89,8 @@ The rules are checked top to bottom, and the first match wins.
 
 ### Limitations
 
-- Keyword matching does not understand sentences. "Grinding was fixed yesterday" still scores 3.
-- Negation only looks at the one word before the keyword.
+- Keyword matching does not understand sentences. "Grinding was fixed yesterday" still scores 3. Words are matched by how they start, so "squeaking" counts, but "noisy" does not.
+- Negation only looks at the one word before the keyword, and a line naming two arms only counts for the first one.
 - Old notes count as much as new ones, and a note is linked to the whole arm, not a single joint.
 
 ## 3. How the spoofed-sensor defense works
@@ -136,7 +137,7 @@ Without the check, ARM-05 would have passed the safety stop with a fake normal r
 ### What it does not catch
 
 - **Both sensors spoofed together.** If the attacker also fakes the current so the pair still matches, the check passes.
-- **Small spoofs inside the 25% tolerance.** For ARM-05, a fake value of 144 Nm or more would pass the check. The real 192 Nm would then be hidden behind a value under the 180 Nm limit. The tolerance creates a band the attacker can hide in.
+- **Small spoofs inside the 25% tolerance.** For ARM-05, any fake value from 144 to 180 Nm passes the spoof check and stays under the 180 Nm limit, so the real 192 Nm would be hidden. The tolerance creates a band the attacker can hide in.
 - **Spoofed temperature or vibration.** Only torque has a second sensor to compare against. Temperature and vibration are taken as reported.
 - **Replaying an older matching pair** of torque and current readings from a time when the arm was healthy.
 
