@@ -1,0 +1,10 @@
+2026-10-12 07:40 | Priya  | ARM-02 wrist makes a small squeak when it rotates fast. Not loud yet.
+2026-10-12 09:15 | Karthik | Coffee machine in the break room is leaking again, someone call facilities.
+2026-10-13 08:05 | Priya  | ARM-01 checked during morning round, no noise and no play in any joint. All good.
+2026-10-13 11:30 | Arjun  | ARM-03 elbow has a grinding noise on every downward stroke, also feels hot to touch.
+2026-10-14 10:20 | Meena  | Line 2 conveyor belt was realigned, nothing to do with the arms.
+2026-10-14 14:45 | Arjun  | ARM-03 grease on elbow housing looks dark, there is some backlash when I push it by hand.
+2026-10-15 16:10 | Karthik | Reminder: safety training on Friday at 3 pm in conference room B.
+2026-10-16 08:50 | Meena  | ARM-05 shoulder sounded rough during startup, smelled something like burning for a moment.
+2026-10-16 13:00 | Priya  | Swapped gripper fingers on ARM-04, normal tool change, no issues seen.
+2026-10-17 09:35 | Arjun  | Floor near ARM-01 was mopped, put a wet floor sign out.
